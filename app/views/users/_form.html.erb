@@ -1,0 +1,132 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :user_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :user_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :user_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :user_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture_url %>
+    <%= form.text_field :picture_url, id: :user_picture_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attempts %>
+    <%= form.number_field :attempts, id: :user_attempts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_login %>
+    <%= form.datetime_select :last_login, id: :user_last_login %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local_host %>
+    <%= form.text_field :local_host, id: :user_local_host %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status_cd %>
+    <%= form.text_field :status_cd, id: :user_status_cd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :register_date %>
+    <%= form.datetime_select :register_date, id: :user_register_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website, id: :user_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :user_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_field :bio, id: :user_bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :private %>
+    <%= form.check_box :private, id: :user_private %>
+  </div>
+
+  <div class="field">
+    <%= form.label :similar %>
+    <%= form.check_box :similar, id: :user_similar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hide_comments %>
+    <%= form.check_box :hide_comments, id: :user_hide_comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :custom_keywords %>
+    <%= form.text_field :custom_keywords, id: :user_custom_keywords %>
+  </div>
+
+  <div class="field">
+    <%= form.label :news_email %>
+    <%= form.check_box :news_email, id: :user_news_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reminder_email %>
+    <%= form.check_box :reminder_email, id: :user_reminder_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_email %>
+    <%= form.check_box :product_email, id: :user_product_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :research_email %>
+    <%= form.check_box :research_email, id: :user_research_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sms %>
+    <%= form.check_box :sms, id: :user_sms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name, id: :user_user_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

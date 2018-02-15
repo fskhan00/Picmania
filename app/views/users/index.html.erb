@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Password</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Picture url</th>
+      <th>Attempts</th>
+      <th>Last login</th>
+      <th>Local host</th>
+      <th>Status cd</th>
+      <th>Register date</th>
+      <th>Website</th>
+      <th>Gender</th>
+      <th>Bio</th>
+      <th>Private</th>
+      <th>Similar</th>
+      <th>Hide comments</th>
+      <th>Custom keywords</th>
+      <th>News email</th>
+      <th>Reminder email</th>
+      <th>Product email</th>
+      <th>Research email</th>
+      <th>Sms</th>
+      <th>User name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.password %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.picture_url %></td>
+        <td><%= user.attempts %></td>
+        <td><%= user.last_login %></td>
+        <td><%= user.local_host %></td>
+        <td><%= user.status_cd %></td>
+        <td><%= user.register_date %></td>
+        <td><%= user.website %></td>
+        <td><%= user.gender %></td>
+        <td><%= user.bio %></td>
+        <td><%= user.private %></td>
+        <td><%= user.similar %></td>
+        <td><%= user.hide_comments %></td>
+        <td><%= user.custom_keywords %></td>
+        <td><%= user.news_email %></td>
+        <td><%= user.reminder_email %></td>
+        <td><%= user.product_email %></td>
+        <td><%= user.research_email %></td>
+        <td><%= user.sms %></td>
+        <td><%= user.user_name %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
